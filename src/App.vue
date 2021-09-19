@@ -10,6 +10,8 @@
       <v-container class="d-flex align-center overflow-hidden">
         <v-toolbar-title
             class="text-h6 text-sm-h5 text-md-h5 font-weight-black"
+            @click="navigate('#home')"
+            style="cursor: pointer;"
         >
           UPROMX.
         </v-toolbar-title>
@@ -29,7 +31,6 @@
 
         <div class="d-md-none">
           <v-app-bar-nav-icon @click="menuClick()"></v-app-bar-nav-icon>
-
           <v-bottom-sheet v-model="sheet">
             <v-list class="px-3">
               <v-subheader>Navigate to</v-subheader>

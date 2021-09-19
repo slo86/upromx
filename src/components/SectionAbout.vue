@@ -7,9 +7,10 @@
           <div class="text-h4 text-sm-h4 text-md-h4 text-lg-h3 font-weight-light mb-6">
             We help to promote <br/><span class="font-weight-bold">your accounts</span>
           </div>
-          <p class="text-body-1 text-md-h6 font-weight-light">
-            Upromx is a platform for promoting your accounts in popular social networks.
-            Platform for promoting your accounts in popular social networks.
+          <p class="text-body-2 text-md-h6 font-weight-light">
+            Upromx is a team of the best marketers, excellent software engineers
+            who have extensive experience working with social networking services
+            and apps to promote your accounts and amplify you earnings.
           </p>
         </v-col>
         <v-col
@@ -46,12 +47,12 @@ export default {
   name: 'SectionAbout',
   data: () => ({
     items: [{
-      title: 'Views',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      title: 'Video views',
+      description: 'We promote your videos for more views and earnings.',
       icon: 'mdi-television-play'
     }, {
-      title: 'Likes',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      title: 'Likes and dislikes',
+      description: 'It can also help to promote the account reputation.',
       icon: 'mdi-thumb-up-outline'
     }, {
       title: 'Comments',

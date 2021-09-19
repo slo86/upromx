@@ -3,16 +3,16 @@
     <v-container fluid class="py-12 grey darken-4">
       <v-row>
         <v-container>
-          <v-row>
-            <v-col>
+          <v-row class="justify-center">
+            <v-col class="col-10 col-sm-8 col-md-6">
               <div
                   class="text-h4 text-md-h3 font-weight-regular align-center mb-4 grey--text text--lighten-2"
                   style="text-align: center;"
               >
                 Need a hand?
               </div>
-              <p class="text-body-1 text-md-h6 font-weight-light grey--text text--lighten" style="text-align: center;">
-                Upromx is a platform for promoting your accounts in <br/>popular social networks.
+              <p class="text-body-1 text-md-h6 font-weight-light grey--text text--lighten text-center">
+                Just fill out the form, click the button and get a profit from working with Upromx team.
               </p>
             </v-col>
           </v-row>
@@ -40,7 +40,6 @@
                     filled
                     dark
                     required
-
                 ></v-text-field>
                 <v-textarea
                     v-model="message"
@@ -52,9 +51,10 @@
                     clearable
                 ></v-textarea>
                 <v-btn
+                    :loading="loading"
+                    :disabled="loading || !valid"
                     dark color="blue"
                     large
-                    :disabled="!valid"
                     class="mr-4"
                     @click="submit"
                 >
@@ -66,6 +66,31 @@
         </v-container>
       </v-row>
     </v-container>
+
+    <v-dialog
+        v-model="dialog"
+        max-width="325"
+    >
+      <v-card class="py-8">
+        <div class="d-flex justify-center">
+          <v-icon size="86" color="green">
+            mdi-checkbox-marked-circle-outline
+          </v-icon>
+        </div>
+        <v-card-title class="text-h6 text-center" >
+          Your message has been sent successfully
+        </v-card-title>
+        <v-btn
+            absolute
+            top
+            right
+            icon
+            @click="dialog = false"
+        >
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </v-card>
+    </v-dialog>
   </section>
 </template>
 
@@ -73,6 +98,8 @@
 export default {
   name: 'SectionContacts',
   data: () => ({
+    dialog: false,
+    loading: false,
     valid: true,
     name: '',
     nameRules: [
@@ -91,7 +118,21 @@ export default {
   }),
   methods: {
     submit () {
-      this.$refs.form.validate();
+      this.loading = true;
+      setTimeout(() => {
+        this.loading = false;
+        this.dialog = true;
+
+        setTimeout(() => {
+          if (this.dialog) {
+            this.dialog = false;
+          }
+        }, 2000);
+
+      }, 1000);
+
+      // this.$refs.form.validate();
+
       // send message
       // show dialog
     },

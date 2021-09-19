@@ -25,12 +25,12 @@
 
         <v-container style="position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
           <v-row class="fill-height" align="center" no-gutters>
-            <v-col class="col-12 col-md-6 pl-4 pl-md-0">
+            <v-col class="col-12 col-md-6 pl-4 pl-md-0 pr-0 pr-md-16">
               <div class="text-h3 white--text text-sm-h4 text-md-h4 text-lg-h3 font-weight-bold mb-6">
                 No prepayment <br/>required
               </div>
               <p class="text-body-1 white--text text-md-h6 font-weight-regular">
-                Upromx is a platform for promoting your accounts in popular social networks.
+                We do not take an advance payment, you only pay for the result.
               </p>
 
               <v-btn large color="white" class="mt-4" @click="$emit('click', 'first')">
@@ -42,7 +42,7 @@
                 We work with popular services
               </div>
               <p class="text-body-1 text-md-h6 font-weight-regular white--text">
-                Upromx is a platform for promoting your accounts in popular social networks.
+                Upromx is a platform for promoting your accounts in most popular social networking sites and services.
               </p>
 
               <v-btn large color="blue" dark class="mt-4" @click="$emit('click', 'second')">

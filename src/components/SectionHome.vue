@@ -21,9 +21,9 @@
               </span>
             </div>
 
-            <p class="text-body-1 text-sm-h6 text-md-h5 mt-6 font-weight-light">
-              Upromx is a platform for promoting your accounts in popular <br class="d-none d-sm-inline"/> social
-              networks and increasing your earnings
+            <p class="text-body-1 text-sm-h6 text-md-h5 mt-6 font-weight-regular">
+              Upromx is a platform for promoting your accounts and channels in popular  <br class="d-none d-sm-inline"/>
+              social networking sites, services and apps to increase your earnings.
             </p>
 
             <v-btn large outlined dark class="mt-4" @click="$emit('click')">

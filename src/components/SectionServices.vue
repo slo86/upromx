@@ -1,18 +1,18 @@
 <template>
   <section id="services">
     <v-container class="section-about px-8 px-md-3">
-      <v-row>
-        <v-col>
-          <div class="text-h4 text-md-h3 font-weight-bold align-center mb-4" style="text-align: center;">
+      <v-row class="justify-center">
+        <v-col class="col-12 col-md-8 col-lg-8">
+          <div class="text-h4 text-md-h3 font-weight-bold mb-4 text-center">
             Services that we work with
           </div>
-          <p class="text-body-1 text-md-h6 font-weight-light align-center" style="text-align: center;">
-            Upromx is a platform for promoting your accounts <br/>in popular social networks.
+          <p class="text-body-1 text-md-h6 font-weight-light text-center">
+            Upromx is a platform for promoting your accounts in popular social networking services and apps.
           </p>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col class="col-12 col-sm-6 col-md-4" v-for="item in items" :key="item.title">
+      <v-row class="d-flex align-stretch">
+        <v-col class="col-12 col-sm-6 col-md-4  align-stretch" v-for="item in items" :key="item.title">
           <v-hover v-slot="{ hover }">
             <v-card :elevation="hover ? 10 : 2">
               <v-img height="220" :src=item.src />
@@ -32,39 +32,39 @@ export default {
   data: () => ({
     items: [{
       title: 'Pornhub Premium',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'The best adult video site.',
       src: '/pornhub-premium.png'
     }, {
       title: 'Youtube',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Free video sharing website.',
       src: '/youtube.png'
     }, {
       title: 'Twitch',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Live streaming platform. ',
       src: '/twitch.png'
     }, {
       title: 'Instagram',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Social networking app for sharing photos and videos.',
       src: '/instagram.png'
     }, {
       title: 'xHamster',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Another one popular adult site xHamster.',
       src: '/xhamster.png'
     }, {
       title: 'OnlyFans',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'OnlyFans is a content subscription service.',
       src: '/onlyfans.png'
     }, {
       title: 'xVideos',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Pornographic video sharing and viewing website.',
       src: '/xvideos.png'
     }, {
       title: 'Twitter',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Social networking and microblogging service.',
       src: '/twitter.png'
     }, {
       title: 'BongaCams',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'BongaCams is an streaming adult website.',
       src: '/bongacams.png'
     }]
   }),
