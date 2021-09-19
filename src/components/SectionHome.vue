@@ -22,7 +22,7 @@
             </div>
 
             <p class="text-body-1 text-sm-h6 text-md-h5 mt-6 font-weight-light">
-              Upromo is a platform for promoting your accounts in popular <br class="d-none d-sm-inline"/> social
+              Upromx is a platform for promoting your accounts in popular <br class="d-none d-sm-inline"/> social
               networks and increasing your earnings
             </p>
 

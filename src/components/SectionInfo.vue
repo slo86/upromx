@@ -30,7 +30,7 @@
                 No prepayment <br/>required
               </div>
               <p class="text-body-1 white--text text-md-h6 font-weight-regular">
-                Upromo is a platform for promoting your accounts in popular social networks.
+                Upromx is a platform for promoting your accounts in popular social networks.
               </p>
 
               <v-btn large color="white" class="mt-4" @click="$emit('click', 'first')">
@@ -42,7 +42,7 @@
                 We work with popular services
               </div>
               <p class="text-body-1 text-md-h6 font-weight-regular white--text">
-                Upromo is a platform for promoting your accounts in popular social networks.
+                Upromx is a platform for promoting your accounts in popular social networks.
               </p>
 
               <v-btn large color="blue" dark class="mt-4" @click="$emit('click', 'second')">

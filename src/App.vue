@@ -11,7 +11,7 @@
         <v-toolbar-title
             class="text-h6 text-sm-h5 text-md-h5 font-weight-black"
         >
-          UPROMO.
+          UPROMX.
         </v-toolbar-title>
 
         <v-spacer></v-spacer>

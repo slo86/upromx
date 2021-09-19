@@ -12,7 +12,7 @@
                 Need a hand?
               </div>
               <p class="text-body-1 text-md-h6 font-weight-light grey--text text--lighten" style="text-align: center;">
-                Upromo is a platform for promoting your accounts in <br/>popular social networks.
+                Upromx is a platform for promoting your accounts in <br/>popular social networks.
               </p>
             </v-col>
           </v-row>

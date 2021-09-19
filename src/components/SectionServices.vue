@@ -7,7 +7,7 @@
             Services that we work with
           </div>
           <p class="text-body-1 text-md-h6 font-weight-light align-center" style="text-align: center;">
-            Upromo is a platform for promoting your accounts <br/>in popular social networks.
+            Upromx is a platform for promoting your accounts <br/>in popular social networks.
           </p>
         </v-col>
       </v-row>

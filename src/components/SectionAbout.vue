@@ -8,7 +8,7 @@
             We help to promote <br/><span class="font-weight-bold">your accounts</span>
           </div>
           <p class="text-body-1 text-md-h6 font-weight-light">
-            Upromo is a platform for promoting your accounts in popular social networks.
+            Upromx is a platform for promoting your accounts in popular social networks.
             Platform for promoting your accounts in popular social networks.
           </p>
         </v-col>
