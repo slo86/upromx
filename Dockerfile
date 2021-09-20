@@ -9,5 +9,8 @@ RUN npm run build
 # этап production (production-stage)
 FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
-EXPOSE 80
+COPY --from=build-stage /app/nginx/templates /etc/nginx/templates
+
+ENV NGINX_PORT 80
+
 CMD ["nginx", "-g", "daemon off;"]

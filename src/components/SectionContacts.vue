@@ -25,25 +25,27 @@
               >
                 <v-text-field
                     v-model="name"
-                    label="Your name"
+                    placeholder="Your name"
                     :rules="nameRules"
                     single-line
                     filled
                     dark
                     required
+                    clearable
                 ></v-text-field>
                 <v-text-field
                     v-model="email"
-                    label="Your email"
+                    placeholder="Your email"
                     :rules="emailRules"
                     single-line
                     filled
                     dark
                     required
+                    clearable
                 ></v-text-field>
                 <v-textarea
                     v-model="message"
-                    label="Your message"
+                    placeholder="Your message"
                     :rules="messageRules"
                     single-line
                     filled
@@ -73,12 +75,20 @@
     >
       <v-card class="py-8">
         <div class="d-flex justify-center">
-          <v-icon size="86" color="green">
+          <v-icon v-if="!this.sendContactsError" size="86" color="green">
             mdi-checkbox-marked-circle-outline
           </v-icon>
+          <v-icon v-else size="86" color="red">
+            mdi-alert-circle-outline
+          </v-icon>
         </div>
-        <v-card-title class="text-h6 text-center" >
-          Your message has been sent successfully
+        <v-card-title class="text-h6 text-center" style="word-break: normal;">
+          <template v-if="!this.sendContactsError">
+            Your message has been sent successfully
+          </template>
+          <template v-else>
+            Something went wrong. Try again later
+          </template>
         </v-card-title>
         <v-btn
             absolute
@@ -95,16 +105,19 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'SectionContacts',
   data: () => ({
     dialog: false,
     loading: false,
+    sendContactsError: false,
     valid: true,
     name: '',
     nameRules: [
       v => !!v || 'Name is required',
-      v => (v && v.length <= 20) || 'Name must be less than 20 characters',
+      v => (v && v.length <= 100) || 'Name must be less than 20 characters',
     ],
     email: '',
     emailRules: [
@@ -113,30 +126,45 @@ export default {
     ],
     message: '',
     messageRules: [
-      v => (v.length <= 200) || 'Message must be less than 200 characters',
+      v => (!v || (!!v && v.length <= 200)) || 'Message must be less than 200 characters',
     ],
   }),
   methods: {
-    submit () {
-      this.loading = true;
-      setTimeout(() => {
+    async submit () {
+      if (this.$refs.form.validate()) {
+        this.loading = true;
+        await this.sleep(1000);
+
+        try {
+          const { data } = await axios.post('/api/contacts', {
+            name: this.name,
+            email: this.email,
+            message: this.message
+          });
+          console.log(data);
+          this.sendContactsError = false;
+          this.$refs.form.reset();
+        } catch (e) {
+          console.error(e);
+          this.sendContactsError = true;
+        }
+
         this.loading = false;
         this.dialog = true;
 
-        setTimeout(() => {
-          if (this.dialog) {
-            this.dialog = false;
-          }
-        }, 2000);
+        await this.sleep(3000);
 
-      }, 1000);
-
-      // this.$refs.form.validate();
-
-      // send message
-      // show dialog
+        if (this.dialog) {
+          this.dialog = false;
+        }
+      }
     },
-  },
+    async sleep(ms) {
+      return new Promise(resolve => {
+        setTimeout(resolve, ms);
+      });
+    }
+  }
 }
 </script>
 
