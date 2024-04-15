@@ -1,4 +1,4 @@
-# premium-promo
+# Upromx.
 
 ## Project setup
 ```

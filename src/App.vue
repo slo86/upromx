@@ -13,7 +13,7 @@
             @click="navigate('#home')"
             style="cursor: pointer;"
         >
-          UPROMX.
+          {{ projectName }}
         </v-toolbar-title>
 
         <v-spacer></v-spacer>
@@ -78,6 +78,7 @@ import SectionAbout from './components/SectionAbout'
 import SectionInfo from './components/SectionInfo'
 import SectionServices from './components/SectionServices'
 import SectionContacts from './components/SectionContacts'
+import project from '../package.json'
 
 export default {
   name: 'App',
@@ -96,6 +97,7 @@ export default {
     dark: true,
     prominent: false,
     showUp: false,
+    projectName: `${project.name.toUpperCase()}.`,
     items: [
       { title: 'Home', target: '#home' },
       { title: 'About Us', target: '#about' },

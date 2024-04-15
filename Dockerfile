@@ -1,5 +1,5 @@
 # этап сборки (build stage)
-FROM node:lts-alpine as build-stage
+FROM node:14.21.3 as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
