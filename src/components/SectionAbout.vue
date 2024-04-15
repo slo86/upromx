@@ -56,11 +56,11 @@ export default {
       icon: 'mdi-thumb-up-outline'
     }, {
       title: 'Comments',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      description: 'Active discussions in the comments are a great way to boost your rating.',
       icon: 'mdi-comment-processing-outline'
     }, {
       title: 'Subscribers',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      description: 'We regularly add new subscribers from different countries.',
       icon: 'mdi-account-group-outline'
     }]
   }),

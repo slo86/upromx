@@ -31,10 +31,6 @@ export default {
   name: 'SectionServices',
   data: () => ({
     items: [{
-      title: 'Pornhub Premium',
-      description: 'The best adult video site.',
-      src: '/pornhub-premium.png'
-    }, {
       title: 'Youtube',
       description: 'Free video sharing website.',
       src: '/youtube.png'
@@ -47,25 +43,17 @@ export default {
       description: 'Social networking app for sharing photos and videos.',
       src: '/instagram.png'
     }, {
-      title: 'xHamster',
-      description: 'Another one popular adult site xHamster.',
-      src: '/xhamster.png'
-    }, {
-      title: 'OnlyFans',
-      description: 'OnlyFans is a content subscription service.',
-      src: '/onlyfans.png'
-    }, {
-      title: 'xVideos',
-      description: 'Pornographic video sharing and viewing website.',
-      src: '/xvideos.png'
-    }, {
       title: 'Twitter',
-      description: 'Social networking and microblogging service.',
+      description: 'Social networking and micro-blogging service.',
       src: '/twitter.png'
     }, {
-      title: 'BongaCams',
-      description: 'BongaCams is an streaming adult website.',
-      src: '/bongacams.png'
+      title: 'Reddit',
+      description: 'American social news aggregation social network.',
+      src: '/reddit.png'
+    }, {
+      title: 'TikTok',
+      description: 'Short-form video hosting service owned by Chinese.',
+      src: '/tiktok.png'
     }]
   }),
 }
